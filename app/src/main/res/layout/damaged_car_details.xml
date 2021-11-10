@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RentedDetails">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="290dp"
+        android:fitsSystemWindows="true"
+        android:background="@color/blueTheme"
+        android:theme="@style/Theme.EventAid">
+
+        <!--car name-->
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/dcCTLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorSecondary"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+            app:title="Car Model"
+            android:padding="10dp"
+            >
+
+            <!--car image-->
+            <ImageView
+                android:id="@+id/imageViewDC"
+                android:layout_width="350dp"
+                android:layout_height="220dp"
+                android:layout_gravity="center_horizontal"
+                app:layout_collapseMode="parallax"/>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"/>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--technician details-->
+            <TextView
+                android:id="@+id/technicianDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="-Technician Details-"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!--technician name-->
+            <TextView
+                android:id="@+id/technicianName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Technician Name: "
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/technicianDetails"
+                app:layout_constraintVertical_bias="0.34"/>
+
+            <TextView
+                android:id="@+id/tvDCTechnicianName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/technicianName"
+                app:layout_constraintStart_toEndOf="@+id/technicianName"
+                app:layout_constraintTop_toTopOf="@+id/technicianName"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <!--technician phone number-->
+            <TextView
+                android:id="@+id/technicianPhoneNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Renter Phone Number: "
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/technicianName"
+                app:layout_constraintVertical_bias="0.34"/>
+
+            <TextView
+                android:id="@+id/tvDCTechnicianPhoneNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/technicianPhoneNumber"
+                app:layout_constraintStart_toEndOf="@+id/technicianPhoneNumber"
+                app:layout_constraintTop_toTopOf="@+id/technicianPhoneNumber"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <!--sent repair date-->
+            <TextView
+                android:id="@+id/repairDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Sent Repair Date: "
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/technicianPhoneNumber"
+                app:layout_constraintVertical_bias="0.34"/>
+
+            <TextView
+                android:id="@+id/tvDCRepairDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/repairDate"
+                app:layout_constraintStart_toEndOf="@+id/repairDate"
+                app:layout_constraintTop_toTopOf="@+id/repairDate"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <!--days of repairing-->
+            <TextView
+                android:id="@+id/repairDays"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Days of Repairing: "
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/repairDate"
+                app:layout_constraintVertical_bias="0.34"/>
+
+            <TextView
+                android:id="@+id/tvDCRepairDays"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/repairDays"
+                app:layout_constraintStart_toEndOf="@+id/repairDays"
+                app:layout_constraintTop_toTopOf="@+id/repairDays"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <!--car details-->
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/black"
+                app:layout_constraintBottom_toTopOf="@+id/carDetails"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/repairDays" />
+
+            <!--Title-->
+            <TextView
+                android:id="@+id/carDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="-Car Details-"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+            <!-- car plate-->
+            <TextView
+                android:id="@+id/carPlate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Car Plate: "
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/carDetails"
+                app:layout_constraintVertical_bias="0.34"/>
+
+            <TextView
+                android:id="@+id/tvDCCarPlate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/carPlate"
+                app:layout_constraintStart_toEndOf="@+id/carPlate"
+                app:layout_constraintTop_toTopOf="@+id/carPlate"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <!--car transmission-->
+            <TextView
+                android:id="@+id/carTransmission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Car Transmission: "
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/carPlate"
+                app:layout_constraintVertical_bias="0.34"/>
+
+            <TextView
+                android:id="@+id/tvDCCarTransmission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/carTransmission"
+                app:layout_constraintStart_toEndOf="@+id/carTransmission"
+                app:layout_constraintTop_toTopOf="@+id/carTransmission"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <!--car driven type-->
+            <TextView
+                android:id="@+id/carDriven"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Car Driven Type: "
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/carTransmission"
+                app:layout_constraintVertical_bias="0.34"/>
+
+            <TextView
+                android:id="@+id/tvDCCarDriven"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/carDriven"
+                app:layout_constraintStart_toEndOf="@+id/carDriven"
+                app:layout_constraintTop_toTopOf="@+id/carDriven"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <!--car body type-->
+            <TextView
+                android:id="@+id/carBody"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Car Body Type: "
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/carDriven"
+                app:layout_constraintVertical_bias="0.34"/>
+
+            <TextView
+                android:id="@+id/tvDCCarBody"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/carBody"
+                app:layout_constraintStart_toEndOf="@+id/carBody"
+                app:layout_constraintTop_toTopOf="@+id/carBody"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <!--price per day-->
+            <TextView
+                android:id="@+id/pricePerDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Price Per Day: "
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/carBody"
+                app:layout_constraintVertical_bias="0.34"/>
+
+            <TextView
+                android:id="@+id/tvDCPricePerDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/pricePerDay"
+                app:layout_constraintStart_toEndOf="@+id/pricePerDay"
+                app:layout_constraintTop_toTopOf="@+id/pricePerDay"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <!--TButton Repaired-->
+            <Button
+                android:id="@+id/btnRepaired"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Repaired"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pricePerDay" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

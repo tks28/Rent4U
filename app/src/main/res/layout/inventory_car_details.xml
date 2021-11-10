@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InventoryCarDetails">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="290dp"
+        android:fitsSystemWindows="true"
+        android:background="@color/blueTheme"
+        android:theme="@style/Theme.EventAid">
+
+        <!--car name-->
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/carCTLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorSecondary"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+            app:title="Car Model"
+            android:padding="10dp">
+
+            <!--car image-->
+            <ImageView
+                android:id="@+id/imageViewCar"
+                android:layout_width="350dp"
+                android:layout_height="220dp"
+                android:layout_gravity="center_horizontal"
+                app:layout_collapseMode="parallax"/>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"/>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--Title-->
+            <TextView
+                android:id="@+id/carDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="-Car Details-"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!--car plate-->
+            <TextView
+                android:id="@+id/InventoryCarPlate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Car Plate: "
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/carDetails"
+                app:layout_constraintVertical_bias="0.34"/>
+
+            <TextView
+                android:id="@+id/tvInventoryCarPlate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/InventoryCarPlate"
+                app:layout_constraintStart_toEndOf="@+id/InventoryCarPlate"
+                app:layout_constraintTop_toTopOf="@+id/InventoryCarPlate"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <!--car transmission-->
+            <TextView
+                android:id="@+id/InventoryCarTransmission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Car Transmission: "
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/InventoryCarPlate"
+                app:layout_constraintVertical_bias="0.34"/>
+
+            <TextView
+                android:id="@+id/tvInventoryCarTransmission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/InventoryCarTransmission"
+                app:layout_constraintStart_toEndOf="@+id/InventoryCarTransmission"
+                app:layout_constraintTop_toTopOf="@+id/InventoryCarTransmission"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <!--car driven type-->
+            <TextView
+                android:id="@+id/InventoryCarDriven"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Car Driven Type: "
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/InventoryCarTransmission"
+                app:layout_constraintVertical_bias="0.34"/>
+
+            <TextView
+                android:id="@+id/tvInventoryCarDriven"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/InventoryCarDriven"
+                app:layout_constraintStart_toEndOf="@+id/InventoryCarDriven"
+                app:layout_constraintTop_toTopOf="@+id/InventoryCarDriven"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <!--car body type-->
+            <TextView
+                android:id="@+id/InventoryCarBody"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Car Body Type: "
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/InventoryCarDriven"
+                app:layout_constraintVertical_bias="0.34"/>
+
+            <TextView
+                android:id="@+id/tvInventoryCarBody"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/InventoryCarBody"
+                app:layout_constraintStart_toEndOf="@+id/InventoryCarBody"
+                app:layout_constraintTop_toTopOf="@+id/InventoryCarBody"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <!--price per day-->
+            <TextView
+                android:id="@+id/InventoryPricePerDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Price Per Day: "
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/InventoryCarBody"
+                app:layout_constraintVertical_bias="0.34"/>
+
+            <TextView
+                android:id="@+id/tvInventoryPricePerDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/InventoryPricePerDay"
+                app:layout_constraintStart_toEndOf="@+id/InventoryPricePerDay"
+                app:layout_constraintTop_toTopOf="@+id/InventoryPricePerDay"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <!--Button Edit-->
+            <Button
+                android:id="@+id/btnEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Edit"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/InventoryPricePerDay" />
+
+            <!--Edit Rent-->
+            <Button
+                android:id="@+id/btnRent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnEdit" />
+
+            <!--Button Repair-->
+            <Button
+                android:id="@+id/btnRepair"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Repair"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnRent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

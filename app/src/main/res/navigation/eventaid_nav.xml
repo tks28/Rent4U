@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/eventaid_nav"
+    app:startDestination="@id/firstFragment">
+
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="com.example.eventaid.RentedCars"
+        android:label="fragment_first"
+        tools:layout="@layout/rented_fragment" />
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="com.example.eventaid.Inventory"
+        android:label="fragment_second"
+        tools:layout="@layout/inventory_fragment" />
+    <fragment
+        android:id="@+id/fourthFragment"
+        android:name="com.example.eventaid.DamagedCar"
+        android:label="fragment_fourth"
+        tools:layout="@layout/damaged_car_fragment" />
+</navigation>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".AddTechnicianDetails">
+
+    <!--Title-->
+    <TextView
+        android:id="@+id/tvAddTechnician"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center_horizontal"
+        android:text="-Add Technician Details-"
+        android:textColor="@color/black"
+        android:textSize="28dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--Technician Name or Company Name-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutTechnicianName"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAddTechnician">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etTechnicianName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Technician Name / Company Name" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Phone Number-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutTechnicianPhoneNumber"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutTechnicianName">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etTechnicianPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone Number" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Date Sent to Repair-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutTechnicianDate"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutTechnicianPhoneNumber">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etTechnicianDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Repair Date" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Days of Repairing-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutTechnicianDays"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutTechnicianDate">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etTechnicianDays"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Days of Repairing" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Button Add Technician-->
+    <Button
+        android:id="@+id/btnAddTechnician"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Technician"
+        app:layout_constraintBottom_toTopOf="@+id/btnCancelTechnician"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutTechnicianDays"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <!--Button Cancel-->
+    <Button
+        android:id="@+id/btnCancelTechnician"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

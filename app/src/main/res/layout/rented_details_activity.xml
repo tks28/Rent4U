@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RentedDetails">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="290dp"
+        android:fitsSystemWindows="true"
+        android:background="@color/blueTheme"
+        android:theme="@style/Theme.EventAid">
+
+        <!--car name-->
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/ctLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorSecondary"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+            app:title="Car Model"
+            android:padding="10dp">
+
+            <!--car image-->
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="350dp"
+                android:layout_height="220dp"
+                android:layout_gravity="center_horizontal"
+                app:layout_collapseMode="parallax"/>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"/>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--rented details-->
+            <TextView
+                android:id="@+id/renterDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="-Renter Details-"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!--renter name-->
+            <TextView
+                android:id="@+id/renterName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Renter Name: "
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/renterDetails"
+                app:layout_constraintVertical_bias="0.34"/>
+
+            <TextView
+                android:id="@+id/tvRentedRenterName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/renterName"
+                app:layout_constraintStart_toEndOf="@+id/renterName"
+                app:layout_constraintTop_toTopOf="@+id/renterName"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <!--renter phone number-->
+            <TextView
+                android:id="@+id/renterPhoneNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Renter Phone Number: "
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/renterName"
+                app:layout_constraintVertical_bias="0.34"/>
+
+            <TextView
+                android:id="@+id/tvRentedRenterPhoneNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/renterPhoneNumber"
+                app:layout_constraintStart_toEndOf="@+id/renterPhoneNumber"
+                app:layout_constraintTop_toTopOf="@+id/renterPhoneNumber"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <!--rent date-->
+            <TextView
+                android:id="@+id/rentDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Rent Date: "
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/renterPhoneNumber"
+                app:layout_constraintVertical_bias="0.34"/>
+
+            <TextView
+                android:id="@+id/tvRentedRentDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/rentDate"
+                app:layout_constraintStart_toEndOf="@+id/rentDate"
+                app:layout_constraintTop_toTopOf="@+id/rentDate"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <!--days of renting-->
+            <TextView
+                android:id="@+id/rentDays"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Days of Renting: "
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rentDate"
+                app:layout_constraintVertical_bias="0.34"/>
+
+            <TextView
+                android:id="@+id/tvRentedRentDays"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/rentDays"
+                app:layout_constraintStart_toEndOf="@+id/rentDays"
+                app:layout_constraintTop_toTopOf="@+id/rentDays"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <!--car details-->
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/black"
+                app:layout_constraintBottom_toTopOf="@+id/carDetails"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rentDays" />
+
+            <TextView
+                android:id="@+id/carDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="-Car Details-"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+            <!-- car plate-->
+            <TextView
+                android:id="@+id/carPlate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Car Plate: "
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/carDetails"
+                app:layout_constraintVertical_bias="0.34"/>
+
+            <TextView
+                android:id="@+id/tvRentedCarPlate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/carPlate"
+                app:layout_constraintStart_toEndOf="@+id/carPlate"
+                app:layout_constraintTop_toTopOf="@+id/carPlate"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <!--car transmission-->
+            <TextView
+                android:id="@+id/carTransmission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Car Transmission: "
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/carPlate"
+                app:layout_constraintVertical_bias="0.34"/>
+
+            <TextView
+                android:id="@+id/tvRentedCarTransmission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/carTransmission"
+                app:layout_constraintStart_toEndOf="@+id/carTransmission"
+                app:layout_constraintTop_toTopOf="@+id/carTransmission"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <!--car driven type-->
+            <TextView
+                android:id="@+id/carDriven"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Car Driven Type: "
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/carTransmission"
+                app:layout_constraintVertical_bias="0.34"/>
+
+            <TextView
+                android:id="@+id/tvRentedCarDriven"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/carDriven"
+                app:layout_constraintStart_toEndOf="@+id/carDriven"
+                app:layout_constraintTop_toTopOf="@+id/carDriven"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <!--car body type-->
+            <TextView
+                android:id="@+id/carBody"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Car Body Type: "
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/carDriven"
+                app:layout_constraintVertical_bias="0.34"/>
+
+            <TextView
+                android:id="@+id/tvRentedCarBody"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/carBody"
+                app:layout_constraintStart_toEndOf="@+id/carBody"
+                app:layout_constraintTop_toTopOf="@+id/carBody"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <!--price per day-->
+            <TextView
+                android:id="@+id/pricePerDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Price Per Day: "
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/carBody"
+                app:layout_constraintVertical_bias="0.34"/>
+
+            <TextView
+                android:id="@+id/tvRentedPricePerDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/pricePerDay"
+                app:layout_constraintStart_toEndOf="@+id/pricePerDay"
+                app:layout_constraintTop_toTopOf="@+id/pricePerDay"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <!--Button Returned-->
+            <Button
+                android:id="@+id/btnReturn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Returned"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pricePerDay" />
+
+            <!--Button Cancel Rent-->
+            <Button
+                android:id="@+id/btnCancelRent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Cancel Rent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnReturn" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

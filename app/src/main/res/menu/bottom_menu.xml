@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/firstFragment"
+        android:title="Rented Cars"
+        android:icon="@drawable/rentcars"/>
+
+    <item
+        android:id="@+id/secondFragment"
+        android:title="Inventory"
+        android:icon="@drawable/inventory"/>
+
+    <item
+        android:id="@+id/fourthFragment"
+        android:title="Damaged Cars"
+        android:icon="@drawable/damagecar"/>
+</menu>
