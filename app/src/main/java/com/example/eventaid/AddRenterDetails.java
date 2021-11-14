@@ -70,7 +70,7 @@ public class AddRenterDetails extends AppCompatActivity {
                     Toast.makeText(AddRenterDetails.this, "Please enter renter name!", Toast.LENGTH_SHORT).show();
                 }
                 else if(!isDigit(metPhoneNumber.getText().toString().trim()) || metPhoneNumber.length() < 10 || metPhoneNumber.length() > 11){
-                    Toast.makeText(AddRenterDetails.this, "Please re-enter phone number!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(AddRenterDetails.this, "Please enter or re-enter phone number!", Toast.LENGTH_SHORT).show();
                 }
                 else if(!datePick) {
                     Toast.makeText(AddRenterDetails.this, "Please select date!", Toast.LENGTH_SHORT).show();
