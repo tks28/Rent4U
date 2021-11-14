@@ -70,7 +70,7 @@ public class AddTechnicianDetails extends AppCompatActivity {
                     Toast.makeText(AddTechnicianDetails.this, "Please enter technician/company name!", Toast.LENGTH_SHORT).show();
                 }
                 else if(!isDigit(metTechnicianPhoneNumber.getText().toString().trim()) || metTechnicianPhoneNumber.length() < 10 || metTechnicianPhoneNumber.length() > 11){
-                    Toast.makeText(AddTechnicianDetails.this, "Please re-enter phone number!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(AddTechnicianDetails.this, "Please enter or re-enter phone number!", Toast.LENGTH_SHORT).show();
                 }
                 else if(!datePick) {
                     Toast.makeText(AddTechnicianDetails.this, "Please select date!", Toast.LENGTH_SHORT).show();
